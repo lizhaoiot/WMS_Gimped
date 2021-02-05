@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IMS>
+<SQLConnect>
+  <IP>192.168.0.97</IP>
+  <DB>hy</DB>
+  <Users>sa</Users>
+  <Password></Password>
+</SQLConnect>
+<Login>
+  <Code>03426</Code>
+  <Name>刘冠振</Name>
+</Login>
+</IMS>

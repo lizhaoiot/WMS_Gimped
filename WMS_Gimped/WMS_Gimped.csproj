@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{521BE011-96C0-4DF9-92DA-168D8489AF52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS_Gimped</RootNamespace>
+    <AssemblyName>WMS_Gimped</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\20181110044901200_easyicon_net_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\ERP公用工具类20180203\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Hui.Controls">
+      <HintPath>..\..\ERP公用工具类20180203\Com.Hui.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Hui.ERP.CommonUtils">
+      <HintPath>..\..\ERP公用工具类20180203\Com.Hui.ERP.CommonUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Hui.iMRP.Utils">
+      <HintPath>..\..\ERPInquire\ERPInquire\bin\Debug\Com.Hui.iMRP.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin">
+      <HintPath>D:\chrome下载\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="hui.erp.utils">
+      <HintPath>..\..\ERP公用工具类20180203\hui.erp.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\ERP公用工具类20180203\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\..\C#窗体控件\皮肤控件\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\ERP公用工具类20180203\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.Common">
+      <HintPath>D:\chrome下载\X86\3.5.0.0\Maticsoft.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.DBUtility">
+      <HintPath>..\..\..\动软DLL\Maticsoft.DBUtility\X86\3.5.0.0\Maticsoft.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\chrome下载\winform.controls-master\TTX.Framework.WindowUI\WindowsTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\ERP公用工具类20180203\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\ERP公用工具类20180203\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\ERP公用工具类20180203\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\ERP公用工具类20180203\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TX.Framework.WindowUI">
+      <HintPath>D:\chrome下载\winform.controls-master\TTX.Framework.WindowUI\WindowsTest\bin\Debug\TX.Framework.WindowUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\WMS_CL_BLL.cs" />
+    <Compile Include="Controls\Hello.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Hello.Designer.cs">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialsC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialsC.Designer.cs">
+      <DependentUpon>MaterialsC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialsP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialsP.Designer.cs">
+      <DependentUpon>MaterialsP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialsR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialsR.Designer.cs">
+      <DependentUpon>MaterialsR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductsR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductsR.Designer.cs">
+      <DependentUpon>ProductsR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductsP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductsP.Designer.cs">
+      <DependentUpon>ProductsP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductsC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductsC.Designer.cs">
+      <DependentUpon>ProductsC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\WMS_CL_DAL.cs" />
+    <Compile Include="ERP\Material\WLCRK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Material\WLCRK.Designer.cs">
+      <DependentUpon>WLCRK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Material\WLKC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Material\WLKC.Designer.cs">
+      <DependentUpon>WLKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Material\WLSFC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Material\WLSFC.Designer.cs">
+      <DependentUpon>WLSFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Product\CPCRK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Product\CPCRK.Designer.cs">
+      <DependentUpon>CPCRK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Product\CPKC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Product\CPKC.Designer.cs">
+      <DependentUpon>CPKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Product\CPSFC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\Product\CPSFC.Designer.cs">
+      <DependentUpon>CPSFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Authority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Authority.Designer.cs">
+      <DependentUpon>Authority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\ChangeCPLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\ChangeCPLocation.Designer.cs">
+      <DependentUpon>ChangeCPLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\ChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\ChangePwd.Designer.cs">
+      <DependentUpon>ChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\CLKW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\CLKW.Designer.cs">
+      <DependentUpon>CLKW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\CPKW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\CPKW.Designer.cs">
+      <DependentUpon>CPKW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\DisplayCPKC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\DisplayCPKC.Designer.cs">
+      <DependentUpon>DisplayCPKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\MaterialInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\MaterialInput.Designer.cs">
+      <DependentUpon>MaterialInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\MaterialOutbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\MaterialOutbound.Designer.cs">
+      <DependentUpon>MaterialOutbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Outbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Outbound.Designer.cs">
+      <DependentUpon>Outbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\PalletTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\PalletTags.Designer.cs">
+      <DependentUpon>PalletTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Mainfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainfrm.Designer.cs">
+      <DependentUpon>Mainfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CL.cs" />
+    <Compile Include="Model\CLHW.cs" />
+    <Compile Include="Model\CLKW.cs" />
+    <Compile Include="Model\CP.cs" />
+    <Compile Include="Model\CPHW.cs" />
+    <Compile Include="Model\CPKW.cs" />
+    <Compile Include="Model\CPRTemp.cs" />
+    <Compile Include="Model\Log.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\WMS_CL_Model.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\DataGridViewFilter.cs" />
+    <Compile Include="SQL\iniFileHelper.cs" />
+    <Compile Include="SQL\SqlExecute.cs" />
+    <EmbeddedResource Include="Controls\Hello.resx">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialsC.resx">
+      <DependentUpon>MaterialsC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialsP.resx">
+      <DependentUpon>MaterialsP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialsR.resx">
+      <DependentUpon>MaterialsR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProductsR.resx">
+      <DependentUpon>ProductsR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProductsP.resx">
+      <DependentUpon>ProductsP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProductsC.resx">
+      <DependentUpon>ProductsC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Material\WLCRK.resx">
+      <DependentUpon>WLCRK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Material\WLKC.resx">
+      <DependentUpon>WLKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Material\WLSFC.resx">
+      <DependentUpon>WLSFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Product\CPCRK.resx">
+      <DependentUpon>CPCRK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Product\CPKC.resx">
+      <DependentUpon>CPKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\Product\CPSFC.resx">
+      <DependentUpon>CPSFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Authority.resx">
+      <DependentUpon>Authority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\ChangeCPLocation.resx">
+      <DependentUpon>ChangeCPLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\ChangePwd.resx">
+      <DependentUpon>ChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\CLKW.resx">
+      <DependentUpon>CLKW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\CPKW.resx">
+      <DependentUpon>CPKW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\DisplayCPKC.resx">
+      <DependentUpon>DisplayCPKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\MaterialInput.resx">
+      <DependentUpon>MaterialInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\MaterialOutbound.resx">
+      <DependentUpon>MaterialOutbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Outbound.resx">
+      <DependentUpon>Outbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\PalletTags.resx">
+      <DependentUpon>PalletTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainfrm.resx">
+      <DependentUpon>Mainfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fd788ce4537a6698ef49ac85ed79aeef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_query_128px_1075411_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\TIM截图20180108125532.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\仓库.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\20181110044901200_easyicon_net_128.ico" />
+    <None Include="Resources\修 改.png" />
+    <None Include="Resources\显示.png" />
+    <None Include="Resources\查询 %281%292.png" />
+    <None Include="Resources\查询 %281%291.png" />
+    <None Include="Resources\查询 %281%29.png" />
+    <None Include="Resources\excel1.png" />
+    <None Include="Resources\查询2.png" />
+    <None Include="Resources\查询1.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\erp [转换].png" />
+    <None Include="Resources\ERP %282%29.png" />
+    <None Include="Resources\出入库1.png" />
+    <None Include="Resources\出入库 %281%291.png" />
+    <None Include="Resources\库存1.png" />
+    <None Include="Resources\出入库.png" />
+    <None Include="Resources\出入库 %281%29.png" />
+    <None Include="Resources\库存.png" />
+    <None Include="Resources\材料.png" />
+    <None Include="Resources\产品 %281%291.png" />
+    <None Include="Resources\产品 %281%29.png" />
+    <None Include="Resources\erp %281%29.png" />
+    <None Include="Resources\ERP.png" />
+    <None Include="Resources\操作日志.png" />
+    <None Include="Resources\权限.png" />
+    <None Include="Resources\数据分析.png" />
+    <None Include="Resources\数据分析 %281%29.png" />
+    <None Include="Resources\数据校验.png" />
+    <None Include="Resources\多层数据校验.png" />
+    <None Include="Resources\基础资料.png" />
+    <None Include="Resources\箱子.png" />
+    <None Include="Resources\是否允许未完成盘点任务开单.png" />
+    <None Include="Resources\出库管理.png" />
+    <None Include="Resources\入库管理.png" />
+    <None Include="Resources\关于.png" />
+    <None Include="Resources\密码.png" />
+    <None Include="Resources\帮助.png" />
+    <None Include="Resources\原材料加工.png" />
+    <None Include="Resources\产品.png" />
+    <None Include="Resources\基础资料2.png" />
+    <None Include="Resources\基础资料1.png" />
+    <None Include="Resources\40类材料加工x16.png" />
+    <None Include="Resources\纸张.png" />
+    <None Include="Resources\box-箱子1.png" />
+    <None Include="Resources\库存盘点.png" />
+    <None Include="Resources\出库登记.png" />
+    <None Include="Resources\入库等记.png" />
+    <None Include="Resources\box-箱子.png" />
+    <None Include="Resources\查询.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
